@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-50: #fff0f5;
+  --color-brand-100: #ffd8e4;
+  --color-brand-200: #ffb5cb;
+  --color-brand-300: #ff85a9;
+  --color-brand-400: #fb477c;
+  --color-brand-500: #f2185b;
+  --color-brand-600: #d7064c;
+  --color-brand-700: #b5003b;
+
+  --color-accent-200: #fff3c4;
+  --color-accent-400: #ffca28;
+
+  --color-background: #fff7fa;
+  /* Tatlı pembemsi arka plan */
+  --color-foreground: #5a4b51;
+
+  --font-sans: var(--font-quicksand);
+  --font-display: var(--font-pacifico);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #fff7fa;
+  --foreground: #5a4b51;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.blob-shape {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: blob-bounce 10s infinite alternate ease-in-out;
+}
+
+.blob-shape-rev {
+  border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+  animation: blob-bounce-rev 12s infinite alternate ease-in-out;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: scale(1) translate(0, 0);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+
+  100% {
+    transform: scale(1.05) translate(-10px, 15px);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes blob-bounce-rev {
+  0% {
+    transform: scale(1.05) translate(0, 0);
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+  }
+
+  100% {
+    transform: scale(1) translate(15px, -10px);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
 }
