@@ -19,7 +19,7 @@ export default function OrderPage() {
         try {
             const formData = new FormData(e.currentTarget);
             const randomStr = Math.random().toString(36).substring(2, 6).toUpperCase();
-            const orderNumber = `CAKE-${randomStr}`;
+            const orderNumber = `LOYA-${randomStr}`;
 
             let referenceImageUrl = null;
 

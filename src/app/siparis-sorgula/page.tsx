@@ -94,7 +94,7 @@ export default function TrackingPage() {
                             <input
                                 value={orderNumber}
                                 onChange={(e) => setOrderNumber(e.target.value)}
-                                placeholder="Örn: CAKE-1A2B"
+                                placeholder="Örn: LOYA-1A2B"
                                 className="w-full bg-brand-50/50 border-2 border-brand-100 rounded-2xl px-5 py-4 focus:ring-4 focus:ring-brand-500/20 focus:border-brand-400 outline-none transition-all font-bold text-center text-lg placeholder:font-medium placeholder:text-gray-400 uppercase tracking-widest text-brand-600"
                             />
                         </div>
